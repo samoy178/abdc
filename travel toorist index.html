@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Travel Packages</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+body{
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("https://picsum.photos/id/1018/1600/900") no-repeat center center fixed;
+
+  background-size: cover;
+  padding:40px;
+}
+
+
+.packages{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  gap:25px;
+  max-width:1200px;
+  margin:auto;
+}
+
+/* card */
+
+.card{
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(10px);
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:0 20px 40px rgba(0,0,0,0.5);
+  border:1px solid rgba(255,255,255,0.25);
+}
+
+
+/* image slider */
+
+.image-slider{
+  position:relative;
+  width:100%;
+  height:210px;
+  overflow:hidden;
+}
+
+.image-track{
+  display:flex;
+  transition:0.4s ease;
+}
+
+.image-track img{
+  width:100%;
+  height:210px;
+  object-fit:cover;
+  flex-shrink:0;
+}
+
+/* arrows */
+
+.arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,0.6);
+  border:none;
+  color:white;
+  font-size:20px;
+  padding:6px 10px;
+  cursor:pointer;
+  border-radius:50%;
+}
+
+.prev{left:10px;}
+.next{right:10px;}
+
+/* dots */
+
+.img-dots{
+  position:absolute;
+  bottom:10px;
+  width:100%;
+  text-align:center;
+}
+
+.img-dot{
+  height:7px;
+  width:7px;
+  background:#bbb;
+  border-radius:50%;
+  display:inline-block;
+  margin:0 4px;
+}
+
+.img-dot.active{
+  background:white;
+}
+
+/* content */
+
+.content{
+  padding:20px;
+}
+
+.content h2{
+  font-size:20px;
+  margin-bottom:8px;
+}
+
+.content p{
+  font-size:14px;
+  color:#444;
+  line-height:1.5;
+}
+
+.days{
+  margin-top:10px;
+  font-weight:bold;
+  color:#aaa;
+}
+
+/* bottom */
+
+.bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:15px;
+}
+
+.price{
+  background:#ef3b46;
+  color:white;
+  padding:9px 16px;
+  border-radius:30px;
+  font-weight:bold;
+}
+
+.book{
+  background:#7a0000;
+  color:white;
+  padding:9px 16px;
+  border-radius:30px;
+  border:none;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+  
+
+<div class="packages">
+
+<!-- ===== PACKAGE 1 ===== -->
+<div class="card">
+  <div class="image-slider">
+    <div class="image-track">
+      <img src="https://picsum.photos/id/1011/800/600">
+      <img src="https://picsum.photos/id/1015/800/600">
+      <img src="https://picsum.photos/id/1025/800/600">
+    </div>
+    <button class="arrow prev">&#10094;</button>
+    <button class="arrow next">&#10095;</button>
+    <div class="img-dots"></div>
+  </div>
+  <div class="content">
+    <h2>Trip to Delhi</h2>
+    <p>Historic streets, monuments and vibrant culture.</p>
+    <div class="days">4N–5D</div>
+    <div class="bottom">
+      <div class="price">Rs. 20000/-</div>
+      <button class="book">Book now</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PACKAGE 2 ===== -->
+<div class="card">
+  <div class="image-slider">
+    <div class="image-track">
+      <img src="https://picsum.photos/id/1040/800/600">
+      <img src="https://picsum.photos/id/1031/800/600">
+      <img src="https://picsum.photos/id/1043/800/600">
+    </div>
+    <button class="arrow prev">&#10094;</button>
+    <button class="arrow next">&#10095;</button>
+    <div class="img-dots"></div>
+  </div>
+  <div class="content">
+    <h2>Trip to Goa</h2>
+    <p>Sunny beaches, nightlife and ocean views.</p>
+    <div class="days">5N–6D</div>
+    <div class="bottom">
+      <div class="price">Rs. 24000/-</div>
+      <button class="book">Book now</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PACKAGE 3 ===== -->
+<div class="card">
+  <div class="image-slider">
+    <div class="image-track">
+      <img src="https://picsum.photos/id/1056/800/600">
+      <img src="https://picsum.photos/id/1067/800/600">
+      <img src="https://picsum.photos/id/1074/800/600">
+    </div>
+    <button class="arrow prev">&#10094;</button>
+    <button class="arrow next">&#10095;</button>
+    <div class="img-dots"></div>
+  </div>
+  <div class="content">
+    <h2>Trip to Jaipur</h2>
+    <p>Royal forts, palaces and colorful markets.</p>
+    <div class="days">3N–4D</div>
+    <div class="bottom">
+      <div class="price">Rs. 17000/-</div>
+      <button class="book">Book now</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PACKAGE 4 ===== -->
+<div class="card">
+  <div class="image-slider">
+    <div class="image-track">
+      <img src="https://picsum.photos/id/1084/800/600">
+      <img src="https://picsum.photos/id/1080/800/600">
+      <img src="https://picsum.photos/id/109/800/600">
+    </div>
+    <button class="arrow prev">&#10094;</button>
+    <button class="arrow next">&#10095;</button>
+    <div class="img-dots"></div>
+  </div>
+  <div class="content">
+    <h2>Trip to Kashmir</h2>
+    <p>Snow peaks, lakes and dreamy valleys.</p>
+    <div class="days">6N–7D</div>
+    <div class="bottom">
+      <div class="price">Rs. 30000/-</div>
+      <button class="book">Book now</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PACKAGE 5 ===== -->
+<div class="card">
+  <div class="image-slider">
+    <div class="image-track">
+      <img src="https://picsum.photos/id/110/800/600">
+      <img src="https://picsum.photos/id/111/800/600">
+      <img src="https://picsum.photos/id/112/800/600">
+    </div>
+    <button class="arrow prev">&#10094;</button>
+    <button class="arrow next">&#10095;</button>
+    <div class="img-dots"></div>
+  </div>
+  <div class="content">
+    <h2>Trip to Kerala</h2>
+    <p>Backwaters, tea gardens and calm beaches.</p>
+    <div class="days">5N–6D</div>
+    <div class="bottom">
+      <div class="price">Rs. 26000/-</div>
+      <button class="book">Book now</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PACKAGE 6 ===== -->
+<div class="card">
+  <div class="image-slider">
+    <div class="image-track">
+      <img src="https://picsum.photos/id/113/800/600">
+      <img src="https://picsum.photos/id/114/800/600">
+      <img src="https://picsum.photos/id/115/800/600">
+    </div>
+    <button class="arrow prev">&#10094;</button>
+    <button class="arrow next">&#10095;</button>
+    <div class="img-dots"></div>
+  </div>
+  <div class="content">
+    <h2>Trip to Ladakh</h2>
+    <p>High-altitude deserts and epic roads.</p>
+    <div class="days">7N–8D</div>
+    <div class="bottom">
+      <div class="price">Rs. 35000/-</div>
+      <button class="book">Book now</button>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script>
+document.querySelectorAll(".card").forEach(card=>{
+  const track = card.querySelector(".image-track");
+  const images = card.querySelectorAll("img");
+  const prev = card.querySelector(".prev");
+  const next = card.querySelector(".next");
+  const dotsBox = card.querySelector(".img-dots");
+
+  let index=0;
+
+  images.forEach((_,i)=>{
+    const d=document.createElement("span");
+    d.className="img-dot";
+    d.onclick=()=>{index=i;update();}
+    dotsBox.appendChild(d);
+  });
+
+  const dots=dotsBox.querySelectorAll(".img-dot");
+
+  function update(){
+    track.style.transform=`translateX(${-index*100}%)`;
+    dots.forEach(d=>d.classList.remove("active"));
+    dots[index].classList.add("active");
+  }
+
+  update();
+
+  next.onclick=()=>{index=(index+1)%images.length;update();}
+  prev.onclick=()=>{index=(index-1+images.length)%images.length;update();}
+
+  let startX=0;
+  track.addEventListener("touchstart",e=>startX=e.touches[0].clientX);
+  track.addEventListener("touchend",e=>{
+    let endX=e.changedTouches[0].clientX;
+    if(startX-endX>50) index++;
+    if(endX-startX>50) index--;
+    if(index<0) index=images.length-1;
+    if(index>=images.length) index=0;
+    update();
+  });
+});
+</script>
+
+</body>
+</html>
